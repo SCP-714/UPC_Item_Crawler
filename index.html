@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- jQuery CDN -->
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous">
+  </script>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <title>UPC Search</title>
+</head>
+
+<body id="body">
+
+  <div class="container mt-4">
+    <div class="mb-3">
+      <input type="search" name="SearchBar" id="searchBar" class="form-control" placeholder="Enter UPC" />
+    </div>
+    <button class="btn btn-primary mb-3" id="searchButton">Search UPC</button>
+    <div id="results"></div>
+  </div>
+
+  <!-- Link to your custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
