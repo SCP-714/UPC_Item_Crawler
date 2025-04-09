@@ -22,7 +22,7 @@ function searchUPC() {
 
     
     $.ajax({
-        url: 'https://api.upcitemdb.com/prod/trial/lookup',
+        url: 'https://api.upcitemdb.com/prod/trial/lookup?upc=',
         method: 'GET',
         data: {
             upc: upc
