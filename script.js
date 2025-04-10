@@ -17,28 +17,12 @@ function searchUPC() {
         alert('Please enter a UPC code');
         return;
     }
-
     clearResults();
 
-    
-    $.ajax({
-        url: 'https://api.upcitemdb.com/prod/trial/lookup?upc=',
-        method: 'GET',
-        data: {
-            upc: upc
-        },
-        success: function(response) {
-            if (response && response.items && response.items.length > 0) {
-                generateItemCard(response.items[0]);
-            } else {
-                $results.append('<p>No item found for that UPC.</p>');
-            }
-        },
-        error: function(err) {
-            console.error('API Error:', err);
-            $results.append('<p>Error fetching item data.</p>');
-        }
+    $.get('http://localhost:3000/lookup', { upc: upc }, function (data) {
+        generateItemCard(data.items[0]);
     });
+
 }
 
 
